@@ -1,0 +1,354 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Lucida Sans, Monaco, monospace";
+}
+body{
+	background-image: url("Images/back222.jpg");
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+/* Header Css */
+header{
+    height: 160px;
+	box-shadow: 0px 0px 3px rgb(255, 243, 210);
+    background-color: rgba(255, 243, 205, 0.7);
+}
+.header{
+	margin: 0 auto; 
+	padding: 0px 40px 0px 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+}
+.header2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search input{
+    width: 400px;
+    height: 30px;  
+}
+.search_btn img{
+    width: 30px;
+}
+.header3 li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.header3  a{
+	text-decoration: none;
+	color: #34495E;
+	font-size: 20px;
+	padding: 5px 13px 5px 2px;
+	transition: color .35s ease;
+}
+.header3 a:hover{
+	color: white;
+    background-color: burlywood;
+}
+#active{
+	color: white;
+    background-color: burlywood;
+}
+
+/* Footer Css */
+footer{
+	height: 80px;
+	box-shadow: 0px 0px 3px rgb(255, 243, 210);
+    background-color: rgba(255, 243, 205, 0.7);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+.sites img{
+    width: 30px;
+}
+/* Main Css */
+.content{
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 85%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form{
+    float: left;
+}
+.head2{
+    display: flex;
+}
+.name{
+    text-shadow: 1px 0px 1px #afacac, 
+    0px 1px 1px #EEEEEE, 
+    2px 1px 1px #afacac, 
+    1px 2px 1px #EEEEEE, 
+    3px 2px 1px #afacac, 
+    2px 3px 1px #EEEEEE, 
+    4px 3px 1px #afacac, 
+    3px 4px 1px #EEEEEE,
+    5px 4px 1px #afacac, 
+    4px 5px 1px #EEEEEE, 
+    6px 5px 1px #afacac, 
+    5px 6px 1px #EEEEEE, 
+    7px 6px 1px #afacac;
+    text-align: center;
+    font-size: 30px;
+    word-spacing: 2px;
+    color: #850a0a;
+    font-weight: bold;
+    text-transform: none;
+}
+.info{
+    padding: 15px;
+    font-size: 18px;
+}
+.container {
+    margin-top: 15px;
+    position: relative;
+}
+.mySlides {
+    display: none;
+ }
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next {
+    margin-left: 510px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+}
+
+.column img{
+    width: 137px;
+}
+.demo {
+    opacity: 0.8;
+}
+.active, .demo:hover {
+    opacity: 1;
+}
+
+
+
+/* Food Css */
+.menu{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.menu div{
+    height: 40px;
+    text-align: center;
+    width: 33.4%;
+}
+.menu a{
+    letter-spacing: 6px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover{
+    background-color: rgb(192, 37, 37);
+    color: white;
+    font-weight: bold;
+}
+#drink{
+    
+    background-color: rgb(192, 37, 37);
+    color: white;
+    font-weight: bold;
+}
+#food{
+    
+    background-color: rgb(192, 37, 37);
+    color: white;
+    font-weight: bold;
+}
+#sweet{
+    
+    background-color: rgb(192, 37, 37);
+    color: white;
+    font-weight: bold;
+}
+.menu div:hover{
+    background-color: rgb(192, 37, 37);
+    color: white;
+    font-weight: bold;
+}
+.drinks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.food{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sweets{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product{
+  width: 215px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(250, 142, 64);
+}
+.product img{
+    width: 200px;
+    height: 140px;
+}
+.product_info{
+    font-size: 25px;
+    text-align: center;
+    margin: 30px 0px;
+}
+.product_info p{
+     color: rgb(165, 27, 27);
+}
+ .product_info p:last-child{
+    font-weight: bold;
+    color: black;
+} 
+ .product_links1, .product_links2 {
+    width: max-content;
+    background-color: rgb(165, 27, 27);
+    padding: 8px;
+    border-radius: 18px;
+    border: 2px solid rgb(165, 27, 27);
+} 
+.product_links{
+    display: flex;
+    justify-content: space-between;
+}
+.product_links a{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.product_links1:hover, .product_links2:hover{
+    background-color: white;
+    border: 2px solid rgb(165, 27, 27);
+    
+}
+.product_links a:hover{
+    color:rgb(165, 27, 27);
+} 
+
+/* Singl Css */
+.content_singl{
+    margin: 130px auto;
+    background-color: whitesmoke;
+    width: max-content;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.image img{
+    width: 350px;
+}
+.desc{
+    margin-left: 10px;
+    background-color: #cecece;
+    padding: 5px 3px 2px 20px;
+}
+#name{
+    color: darkred;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Blog Css */
+.content_blog{
+    margin: 0 auto;
+    background-color: whitesmoke;
+    width: 85%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.content_blog p{
+    background-color: darksalmon;
+    margin: 0 auto;
+    font-size: 20px;
+    width: 70%;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 2px;
+}
+#text{
+    padding: 5px;
+    font-weight: bold;
+    width: 90%;
+}
+.videos{
+    margin-top: 20px;
+}
+
+/* Contact Css */
+.content_contact{
+    margin: 130px auto;
+    background-color: whitesmoke;
+    width: max-content;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.left{
+    margin: 30px;
+}
+.right{
+    font-size: 20px;
+    border: 2px solid #cecece;
+    padding: 3px;
+    margin: 30px;
+}
+textarea{
+    width: 167px;
+    height: 50px;
+}
+
+
