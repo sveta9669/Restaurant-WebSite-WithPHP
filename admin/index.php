@@ -34,11 +34,11 @@ if(!empty( $_POST['add'])){
             echo 'DB ERROR';
         }
     }
-
-if ( ! empty( $_POST['delete'] ) && !empty($_GET['id']) ) {
+if ( isset( $_GET['delete'] ) && isset($_GET['id']) ) {
+    
     $date = mysqli_connect( 'localhost', 'root', '', 'webphp' );
     if ( $date ) {
-        $query    = "DELETE FROM `products` WHERE `id`=" . $_GET['id'];
+        $query  = "DELETE FROM `products` WHERE `id`= ".$_GET['id'];
         $response = mysqli_query( $date, $query );
         if ( $response == true ) {
             echo 'Product successfully deleted';
@@ -49,36 +49,7 @@ if ( ! empty( $_POST['delete'] ) && !empty($_GET['id']) ) {
         echo 'DB ERROR';
     }
 }
-
-
-// && !empty($_GET['id1']) && !empty($_GET['id2'])
-
-
-
-if ( ! empty( $_POST['find'] ) ) {
-    $date = mysqli_connect( 'localhost', 'root', '', 'webphp' );
-    echo $_POST['id1']."    ".$_POST['id2'];
-    $id1= $_POST['id1'];
-    $id2= $_POST['id2'];
-
-    if ( $date ) {
-        $query = "SELECT * FROM `products` WHERE id BETWEEN  $id1 AND $id2 ";
-        $response = mysqli_query( $date, $query);
-        if ( $response == true ) {
-        $product = mysqli_fetch_assoc($response);
-            foreach ($product as $key => $product) { 
-            echo "<br>".$product;
-        }
-        } else {
-            echo 'Something is wrong please try again';
-        }
-    } 
-    else {
-        echo 'DB ERROR';
-    }
-}
-
-     ?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -116,19 +87,12 @@ if ( ! empty( $_POST['find'] ) ) {
         <div class="content">
             <div class="form">
              <h1>Add Product</h1>
-                <!-- <form action="/web2/admin/index.php" method="post">
+                <form action="/web2/admin/index.php" method="post">
                     <input type="text" name="image" placeholder="Image"> <br>
                     <input type="text" name="title" placeholder="Title"> <br>
                     <input type="number" name="price" placeholder="Price"> <br>
         
                     <input type="submit" name="add">
-                </form> -->
-
-                <form action="/web2/admin/index.php" method="post">
-                    <input type="number" name="id1" > <br>
-                    <input type="number" name="id2" > <br>
-        
-                    <input type="submit" name="find">
                 </form>
 
                 <?php 
